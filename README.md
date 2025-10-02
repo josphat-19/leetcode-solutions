@@ -7,3 +7,4 @@
 | # | Title | Difficulty | Skills |
 |---| ----- | ---------- | ------ |
 | 0175 | [Combine Two Tables](https://leetcode.com/problems/combine-two-tables) | Easy | `Database` |
+| 0577 | [Employee Bonus](https://leetcode.com/problems/employee-bonus) | Easy | `Database` |
