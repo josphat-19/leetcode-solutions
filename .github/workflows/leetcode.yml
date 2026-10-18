@@ -1,9 +1,9 @@
 name: Sync LeetCode
 
 on:
-  workflow_dispatch: # Allows you to run it manually anytime
+  workflow_dispatch: 
   schedule:
-    - cron: '0 8 * * *' # Runs automatically every day at 8:00 AM UTC
+    - cron: '0 8 * * *' 
 
 jobs:
   build:
@@ -11,9 +11,9 @@ jobs:
 
     steps:
       - name: Sync Solutions
-        uses: joshcai/leetcode-sync@v1.7 # Corrected repository name
+        uses: idursun/leetcode-sync@v2.1.0 # Updated to support modern Node.js
         with:
-          github-token: ${{ github.token }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          destination-folder: 'solutions' # Folder where your code will live
+          destination-folder: 'solutions'
